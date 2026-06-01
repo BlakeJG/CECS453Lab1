@@ -11,19 +11,19 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Column( // Outside column to contain the 2 columns of information
+        body: Column( //Outside column to contain the 2 columns of information
           mainAxisAlignment: MainAxisAlignment.center,
           spacing: 200.0,
           children: <Widget> [
-            Column( // First column where the avatar, name, and title go
+            Column( //avatar, name, and title
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  backgroundImage: AssetImage('assets/image/Bold_and_Brash.webp'),
+                  backgroundImage: AssetImage('assets/image/tree.webp'),
                   radius: 100
                 ),
                 Text(
-                  'John Smith',
+                  'Spencer Wiitanen',
                   style: TextStyle(
                     fontSize: 48.0 
                   )
@@ -36,7 +36,7 @@ class MainApp extends StatelessWidget {
                 )
               ]
             ),
-            Column( // Second column where phone, socials, and email go
+            Column( //phone, socials, and email
               children: <Widget>[
                 //Phone Row
                 Row(
