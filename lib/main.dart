@@ -11,8 +11,94 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        body: Column( // Outside column to contain the 2 columns of information
+          mainAxisAlignment: MainAxisAlignment.center,
+          spacing: 200.0,
+          children: <Widget> [
+            Column( // First column where the avatar, name, and title go
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  backgroundImage: AssetImage('assets/image/Bold_and_Brash.webp'),
+                  radius: 100
+                ),
+                Text(
+                  'John Smith',
+                  style: TextStyle(
+                    fontSize: 48.0 
+                  )
+                ),
+                Text(
+                  'Flutter Developer',
+                  style: TextStyle(
+                    fontSize: 24.0 
+                  )
+                )
+              ]
+            ),
+            Column( // Second column where phone, socials, and email go
+              children: <Widget>[
+                //Phone Row
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/image/phone.png'),
+                      radius: 20,
+                    ),
+                    SizedBox(width: 15),
+                    SizedBox(
+                      width: 200,
+                      child: Text(
+                        '555-555-5555',
+                        style: TextStyle(fontSize: 24.0),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 15),
+                
+                //Social Row
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/image/profile.jpg'),
+                      radius: 20,
+                    ),
+                    SizedBox(width: 15),
+                    SizedBox(
+                      width: 200,
+                      child: Text(
+                        '@username',
+                        style: TextStyle(fontSize: 24.0),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 15),
+                
+                //Email Row
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/image/email.webp'),
+                      radius: 20,
+                    ),
+                    SizedBox(width: 15),
+                    SizedBox(
+                      width: 200,
+                      child: Text(
+                        'test@gmail.com',
+                        style: TextStyle(fontSize: 24.0),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
